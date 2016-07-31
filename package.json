@@ -2,7 +2,16 @@
   "name": "simplecountdown",
   "version": "1.0.0",
   "description": "A simple countdown",
-  "main": "simpleCountdown.js",
+  "devDependencies": {
+    "browserify": "latest",
+    "uglifyjs": "latest"
+  },
+  "scripts": {
+    "clean": "rm dist/*",
+    "build": "browserify simplecountdown.js > dist/simplecountdown-$npm_package_version.js | uglifyjs > dist/simplecountdown-$npm_package_version.min.js",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "main": "simplecountdown.js",
   "directories": {
     "example": "examples"
   },
