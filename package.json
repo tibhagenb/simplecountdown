@@ -1,0 +1,11 @@
+{
+  "name": "simplecountdown",
+  "version": "1.0.0",
+  "description": "A simple countdown",
+  "main": "simpleCountdown.js",
+  "directories": {
+    "example": "examples"
+  },
+  "author": "Benoît HAGENBOURGER",
+  "license": "ISC"
+}
