@@ -8,7 +8,7 @@
   },
   "scripts": {
     "clean": "rm dist/*",
-    "build": "browserify simplecountdown.js > dist/simplecountdown-$npm_package_version.js | uglifyjs > dist/simplecountdown-$npm_package_version.min.js",
+    "build": "browserify simplecountdown.js > dist/$npm_package_name-$npm_package_version.js | uglifyjs > dist/$npm_package_name-$npm_package_version.min.js",
     "prepublish": "npm run clean && npm run build"
   },
   "main": "simplecountdown.js",
