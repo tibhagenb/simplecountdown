@@ -1,15 +1,17 @@
 {
   "name": "simplecountdown",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple countdown",
   "devDependencies": {
     "browserify": "latest",
     "uglifyjs": "latest"
   },
   "scripts": {
+    "postversion": "git checkout -b $npm_package_version && git push origin $npm_package_version",
     "clean": "rm dist/*",
     "build": "browserify simplecountdown.js > dist/$npm_package_name-$npm_package_version.js | uglifyjs > dist/$npm_package_name-$npm_package_version.min.js",
-    "prepublish": "npm run clean && npm run build"
+    "prepublish": "npm run clean && npm run build",
+    "postpublish": "git tag $npm_package_version && git push origin --tags && git checkout master && git merge $npm_package_version && git push"
   },
   "main": "simplecountdown.js",
   "directories": {
