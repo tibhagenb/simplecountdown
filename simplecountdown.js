@@ -13,28 +13,41 @@
       'days': d
     }
    },
-   loadCSS: function(){
-   	var brick = ".brick{" + 
-    	"padding: 10px;" + 
-    	"display:inline-block;" +
-      "}";
-    var legend = ".legend{" + 
-    	"display: block;"
-      "}";
-    var css = brick + legend;
+   themes: {
+     raw: { 
+       brick:
+         ".brick{" + 
+    	   "padding: 10px;" + 
+    	   "display:inline-block;" +  
+         "}",
+       legend: 
+         ".legend{" + 
+    	  "display: block;" +
+         "}" 
+     }
+   },
+   addTheme: function (newTheme) {
+     for (p in newTheme) {
+       if (newTheme.hasOwnProperty(p)) {
+         this.themes[p] = newTheme[p];
+       }
+     }
+   },
+   loadCSS: function(theme){
+    theme = theme ? theme : "raw";
     var cssDiv = document.createElement('div');
-    cssDiv.innerHTML = '<style>' + css + '</style>';
+    cssDiv.innerHTML = '<style>' + this.themes[theme].brick + this.themes[theme].legend + '</style>';
     document.getElementsByTagName('head')[0].appendChild(cssDiv.childNodes[0]);
    },
-   display: function(container, deadline){
-   	this.loadCSS();
+   display: function(container, deadline, theme){
+    this.loadCSS(theme);
     var t = this.computeTimeRemaining(deadline);
     document.getElementById(container).innerHTML = '<div class="brick">' 
 + t.days + '<span class="legend">Days</span></div><div class="brick">' + t.hours + '<span class="legend">Hours</span></div><div class="brick">' + t.minutes + '<span class="legend">Minutes</span></div><div class="brick">' + t.seconds + '<span class="legend">Seconds</span></div>';
    },
-   autoDisplay: function(container, deadline){
-   	this.display(container, deadline);
-   	setInterval(function(){SimpleCountdown.display(container, deadline);}, 1000);
+   autoDisplay: function(container, deadline, theme){
+     this.display(container, deadline, theme);
+     setInterval(function(){SimpleCountdown.display(container, deadline, theme);}, 1000);
    }
  };
 })();
