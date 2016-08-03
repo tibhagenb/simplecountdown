@@ -19,14 +19,14 @@
          title: "My countdown"
        },
        style: { 
-         container: "",
-         title: "",
+         container: ".container{}",
+         title: ".title{}",
          brick:
            ".brick{" + 
     	     "padding: 10px;" + 
     	     "display:inline-block;" +  
            "}",
-         number: "",
+         number: ".number{}",
          legend: 
            ".legend{" + 
     	    "display: block;" +
@@ -43,7 +43,7 @@
    },
    loadCSS: function(theme){
     var cssDiv = document.createElement('div');
-    cssDiv.innerHTML = '<style>' + this.themes[theme].style.container + this.themes[theme].style.brick + this.themes[theme].style.number + this.themes[theme].style.legend + '</style>';
+    cssDiv.innerHTML = '<style>' + this.themes[theme].style.title + this.themes[theme].style.container + this.themes[theme].style.brick + this.themes[theme].style.number + this.themes[theme].style.legend + '</style>';
     document.getElementsByTagName('head')[0].appendChild(cssDiv.childNodes[0]);
    },
    display: function(container, deadline, theme){
