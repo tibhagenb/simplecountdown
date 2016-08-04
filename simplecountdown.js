@@ -56,7 +56,7 @@
    },
    autoDisplay: function(container, deadline, theme){
      this.display(container, deadline, theme);
-     setInterval(function(){SimpleCountdown.display(container, deadline, theme);}, 100000000);
+     setInterval(function(){SimpleCountdown.display(container, deadline, theme);}, 1000);
    }
  };
 })();
