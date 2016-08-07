@@ -2,10 +2,10 @@
  window.SimpleCountdown = {
    computeTimeRemaining: function(deadline){
     var t = Date.parse(deadline) - Date.parse(new Date());
-    var s = Math.floor((t / 1000) % 60);
-    var m = Math.floor((t / 1000 / 60) % 60);
-    var h = Math.floor((t / (1000 * 60 * 60)) % 24);
-    var d = Math.floor(t / (1000 * 60 * 60 * 24));
+    var s = t > 0 ? Math.floor((t / 1000) % 60) : 0;
+    var m = t > 0 ? Math.floor((t / 1000 / 60) % 60) : 0;
+    var h = t > 0 ? Math.floor((t / (1000 * 60 * 60)) % 24) : 0;
+    var d = t > 0 ? Math.floor(t / (1000 * 60 * 60 * 24)) : 0;
     return {
       'seconds': s,
       'minutes': m,
