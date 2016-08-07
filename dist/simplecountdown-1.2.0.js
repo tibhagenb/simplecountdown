@@ -19,20 +19,20 @@
        content: {
          title: "My countdown"
        },
-       style: { 
+       style: {
          container: ".container{}",
          title: ".title{}",
          brick:
-           ".brick{" + 
-    	     "padding: 10px;" + 
-    	     "display:inline-block;" +  
+           ".brick{" +
+    	     "padding: 10px;" +
+    	     "display:inline-block;" +
            "}",
          number: ".number{}",
-         legend: 
-           ".legend{" + 
+         legend:
+           ".legend{" +
     	    "display: block;" +
            "}"
-       } 
+       }
      }
    },
    addTheme: function (newTheme) {
@@ -52,7 +52,7 @@
     this.loadCSS(theme);
     var t = this.computeTimeRemaining(deadline);
     document.getElementById(container).className += " container";
-    document.getElementById(container).innerHTML = '<div class="title">' + this.themes[theme].content.title + '</div><div class="brick"><span class="number">' 
+    document.getElementById(container).innerHTML = '<div class="title">' + this.themes[theme].content.title + '</div><div class="brick"><span class="number">'
 + t.days + '</span><span class="legend">Days</span></div><div class="brick"><span class="number">' + t.hours + '</span><span class="legend">Hours</span></div><div class="brick"><span class="number">' + t.minutes + '</span><span class="legend">Minutes</span></div><div class="brick"><span class="number">' + t.seconds + '</span><span class="legend">Seconds</span></div>';
    },
    autoDisplay: function(container, deadline, theme){
