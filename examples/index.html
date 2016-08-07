@@ -5,6 +5,8 @@
 <head>
   <title>Countdown</title>
   <script type="text/javascript" src="../simplecountdown.js"></script>
+  <script type="text/javascript" src="../themes/playa.js"></script>
+
   <style>
     html, body {
       height: 100%;
@@ -18,6 +20,7 @@
     .wrapper {
       display: table-cell;
       height: 100%;
+      width: auto;
       vertical-align: middle;
     }
   </style>
@@ -29,7 +32,7 @@
   </div>
   <script type="text/javascript">
     var deadline = '2016-08-15 15:00:00';
-    SimpleCountdown.autoDisplay('myCountdown', deadline);
+    SimpleCountdown.autoDisplay('myCountdown', deadline, "playa");
   </script>
 </body>
 
