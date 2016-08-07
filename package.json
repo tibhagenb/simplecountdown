@@ -1,7 +1,7 @@
 {
   "name": "simplecountdown",
   "version": "1.1.1",
-  "description": "A simple countdown",
+  "description": "A simple countdown with style customizable",
   "devDependencies": {
     "browserify": "latest",
     "uglifyjs": "latest"
