@@ -51,11 +51,11 @@ SimpleCountdown.addTheme(
          title: "My title" // Title displayed above the counter
        },
        style: {
-         container: ".container{}", // container is the class of countdown container
-         title: ".title{}", // title is the class of title div, add your css here to customize title
-         brick: ".brick{}", // brick is the class of each div which contains number and legend
-         number: ".number{}", // number is the class of each span in which numbers are displayed
-         legend:".legend{}" // legend is the class of each span in which legend (day, hour, minute, second) is displayed
+         container: ".sc-container{}", // sc-container is the class of countdown container
+         title: ".sc-title{}", // sc-title is the class of title div, add your css here to customize title
+         brick: ".sc-brick{}", // sc-brick is the class of each div which contains number and legend
+         number: ".sc-number{}", // sc-number is the class of each span in which numbers are displayed
+         legend:".sc-legend{}" // sc-legend is the class of each span in which legend (day, hour, minute, second) is displayed
        }
      }
    }
