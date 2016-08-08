@@ -15,8 +15,19 @@
   },
   "main": "simplecountdown.js",
   "directories": {
-    "example": "examples"
+    "example": "examples",
+    "themes": "themes",
+    "dist": "release"
   },
   "author": "Benoît HAGENBOURGER",
-  "license": "ISC"
+  "contributors": [
+    {
+      "name": "Thibault HAGENBOURGER"
+    }
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhagenbourger/simplecountdown.git"
+  }
 }
