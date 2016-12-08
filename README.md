@@ -61,3 +61,25 @@ SimpleCountdown.addTheme(
    }
 );
 ```
+
+#Develop your own theme with javascript callback
+Since v1.4.0 it is possible to add a javascript callback called after the theme css application. This callback is optional, has no parameter and must be set in second paramter of addTheme function like describe below:
+```javascript
+SimpleCountdown.addTheme(
+  {
+    myNewTheme: { // myNewTheme is the name of the theme, name to specify in method autoDisplay in third parameter
+       content: {
+         title: "My title" // Title displayed above the counter
+       },
+       style: {
+         container: ".sc-container{}", // sc-container is the class of countdown container
+         title: ".sc-title{}", // sc-title is the class of title div, add your css here to customize title
+         brick: ".sc-brick{}", // sc-brick is the class of each div which contains number and legend
+         number: ".sc-number{}", // sc-number is the class of each span in which numbers are displayed
+         legend:".sc-legend{}" // sc-legend is the class of each span in which legend (day, hour, minute, second) is displayed
+       }
+     }
+   },
+   function myAfterCallback(){console.log('my first callback');}
+);
+```
