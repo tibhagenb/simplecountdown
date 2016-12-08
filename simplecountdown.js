@@ -31,14 +31,18 @@
            ".sc-legend{" +
     	    "display: block;" +
            "}"
-       }
+       },
+       js: ""
      }
    },
-   addTheme: function (newTheme) {
+   addTheme: function (newTheme, afterCallback) {
      for (p in newTheme) {
        if (newTheme.hasOwnProperty(p)) {
          this.themes[p] = newTheme[p];
        }
+     }
+     if(afterCallback){
+         afterCallback();
      }
    },
    loadCSS: function(theme){
