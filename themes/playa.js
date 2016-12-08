@@ -5,13 +5,13 @@ SimpleCountdown.addTheme(
          title: "Playa &#9728"
        },
        style: {
-         container: ".container{" +
+         container: ".sc-container{" +
             "font-family: sans-serif, 'Arial', 'Helvetica';" +
             "background: linear-gradient(#29B6F6, #4FC3F7, #81D4FA, #B3E5FC, #B3E5FC, #B3E5FC, #B3E5FC, rgba(255,255,255,0.8), #FFF176, #FFEE58);" +
             "background: -moz-linear-gradient(#29B6F6, #4FC3F7, #81D4FA, #B3E5FC, #B3E5FC, #B3E5FC, #B3E5FC, rgba(255,255,255,0.8),  #FFF176, #FFEE58);" +
             "background: -webkit-linear-gradient(#29B6F6, #4FC3F7, #81D4FA, #B3E5FC, #B3E5FC, #B3E5FC, #B3E5FC, rgba(255,255,255,0.8), #FFF176, #FFEE58);" +
          "}",
-         title: ".title{" +
+         title: ".sc-title{" +
             "font-weight: 900;" +
             "font-size: 3em;" +
             "font-family: Verdana, Geneva, sans-serif;" +
@@ -19,7 +19,7 @@ SimpleCountdown.addTheme(
             "text-shadow: 2px 2px rgba(0,0,0,0.1);" +
          "}",
          brick:
-          ".brick{" +
+          ".sc-brick{" +
             "margin: 5% 1%;" +
             "width: 75px;" +
             "height: 75px;" +
@@ -30,51 +30,51 @@ SimpleCountdown.addTheme(
           "}" +
 
           // - Select first brick
-          ".brick:nth-child(2){" +
+          ".sc-brick:nth-child(2){" +
             "border: 2px solid #FFEB3B;" +
           "}" +
 
-          ".brick:nth-child(2) .number{" +
+          ".sc-brick:nth-child(2) .sc-number{" +
             "color: rgba(255,255,255,0.8);" +
           "}" +
 
-          ".brick:nth-child(2) .legend{" +
+          ".sc-brick:nth-child(2) .sc-legend{" +
             "color: #FFEB3B;" +
           "}" +
 
-          ".brick:nth-child(3){" +
+          ".sc-brick:nth-child(3){" +
             "border: 2px solid #FFEE58;" +
           "}" +
 
-          ".brick:nth-child(3) .number{" +
+          ".sc-brick:nth-child(3) .sc-number{" +
             "color: rgba(255,255,255,0.9);" +
           "}" +
 
-          ".brick:nth-child(3) .legend{" +
+          ".sc-brick:nth-child(3) .sc-legend{" +
             "color: #FFEE58;" +
           "}" +
 
-          ".brick:nth-child(4){" +
+          ".sc-brick:nth-child(4){" +
             "border: 2px solid #FFF59D;" +
           "}" +
 
-          ".brick:nth-child(4) .legend{" +
+          ".sc-brick:nth-child(4) .sc-legend{" +
             "color: #FFF59D;" +
           "}" +
 
-          ".brick:nth-child(4) .number{" +
+          ".sc-brick:nth-child(4) .sc-number{" +
             "color: rgba(255,255,255,1);" +
           "}" +
 
-          ".brick:nth-child(5){" +
+          ".sc-brick:nth-child(5){" +
             "border: 2px solid #FFF9C4;" +
           "}" +
 
-          ".brick:nth-child(5) .number{" +
+          ".sc-brick:nth-child(5) .sc-number{" +
             "color: #FFF9C4;" +
           "}",
 
-         number: ".number{ " +
+         number: ".sc-number{ " +
             "font-size: 1.7em;" +
             "color: white;" +
             "font-weight: 900;" +
@@ -84,7 +84,7 @@ SimpleCountdown.addTheme(
             "margin-top: 10%;" +
          "}",
 
-         legend:".legend{" +
+         legend:".sc-legend{" +
             "display: block;" +
             "font-size: 12px;" +
             "text-transform: uppercase;" +

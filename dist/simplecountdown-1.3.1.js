@@ -19,20 +19,20 @@
        content: {
          title: "My countdown"
        },
-       style: { 
-         container: ".container{}",
-         title: ".title{}",
+       style: {
+         container: ".sc-container{}",
+         title: ".sc-title{}",
          brick:
-           ".brick{" + 
-    	     "padding: 10px;" + 
-    	     "display:inline-block;" +  
+           ".sc-brick{" +
+    	     "padding: 10px;" +
+    	     "display:inline-block;" +
            "}",
-         number: ".number{}",
-         legend: 
-           ".legend{" + 
+         number: ".sc-number{}",
+         legend:
+           ".sc-legend{" +
     	    "display: block;" +
            "}"
-       } 
+       }
      }
    },
    addTheme: function (newTheme) {
@@ -51,9 +51,9 @@
     theme = theme ? theme : "raw";
     this.loadCSS(theme);
     var t = this.computeTimeRemaining(deadline);
-    document.getElementById(container).className += " container";
-    document.getElementById(container).innerHTML = '<div class="title">' + this.themes[theme].content.title + '</div><div class="brick"><span class="number">' 
-+ t.days + '</span><span class="legend">Days</span></div><div class="brick"><span class="number">' + t.hours + '</span><span class="legend">Hours</span></div><div class="brick"><span class="number">' + t.minutes + '</span><span class="legend">Minutes</span></div><div class="brick"><span class="number">' + t.seconds + '</span><span class="legend">Seconds</span></div>';
+    document.getElementById(container).className += " sc-container";
+    document.getElementById(container).innerHTML = '<div class="sc-title">' + this.themes[theme].content.title + '</div><div class="sc-brick"><span class="sc-number">'
++ t.days + '</span><span class="sc-legend">Days</span></div><div class="sc-brick"><span class="sc-number">' + t.hours + '</span><span class="sc-legend">Hours</span></div><div class="sc-brick"><span class="sc-number">' + t.minutes + '</span><span class="sc-legend">Minutes</span></div><div class="sc-brick"><span class="sc-number">' + t.seconds + '</span><span class="sc-legend">Seconds</span></div>';
    },
    autoDisplay: function(container, deadline, theme){
      this.display(container, deadline, theme);
