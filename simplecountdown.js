@@ -1,5 +1,6 @@
 (function(){
  window.SimpleCountdown = {
+   callback: null,
    computeTimeRemaining: function(deadline){
     var t = Date.parse(deadline) - Date.parse(new Date());
     var s = t > 0 ? Math.floor((t / 1000) % 60) : 0;
@@ -42,7 +43,7 @@
        }
      }
      if(afterCallback){
-         afterCallback();
+         this.callback = afterCallback;
      }
    },
    loadCSS: function(theme){
@@ -58,9 +59,12 @@
     var t = this.computeTimeRemaining(deadline);
     if(!refresh){
     	document.getElementById(container).className += " sc-container";
-	}
+	  }
     document.getElementById(container).innerHTML = '<div class="sc-title">' + this.themes[theme].content.title + '</div><div class="sc-brick"><span class="sc-number">'
 + t.days + '</span><span class="sc-legend">Days</span></div><div class="sc-brick"><span class="sc-number">' + t.hours + '</span><span class="sc-legend">Hours</span></div><div class="sc-brick"><span class="sc-number">' + t.minutes + '</span><span class="sc-legend">Minutes</span></div><div class="sc-brick"><span class="sc-number">' + t.seconds + '</span><span class="sc-legend">Seconds</span></div>';
+    if(!refresh && this.callback){
+      this.callback();
+    }
    },
    autoDisplay: function(container, deadline, theme){
      this.display(container, deadline, theme, false);
